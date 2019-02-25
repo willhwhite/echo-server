@@ -1,9 +1,9 @@
 import socket
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_IP)
-client_socket.connect(("127.0.0.1", 20000))
+client_socket.connect(("127.0.0.1", 20001))
 
-my_message = input("> ")
+my_message = input("What's up socket?")
 client_socket.sendall(my_message.encode('utf-8'))
 
 received_message = client_socket.recv(4096)
